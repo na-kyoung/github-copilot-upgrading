@@ -1,6 +1,5 @@
-# setup.py (legacy에서 복사)import distribute_setup
-
-# ...existing code...distribute_setup.use_setuptools()
+import distribute_setup
+distribute_setup.use_setuptools()
 from setuptools import setup
 
 tests_require = ['pytest']
@@ -69,7 +68,6 @@ in our twitter app by calling it this way::
 
 
 Getting Deafults
----------------------
 Above we inspected an INI file with some changed values. But what happens when the user
 has none?
 
@@ -82,7 +80,6 @@ it in some sub-module::
     True
 
 Updating Values
------------------
 What if a user makes changes? We can always save and update what we read from the INI
 file at load time, to make sure we have the latest changes from the user::
 
